@@ -1,12 +1,86 @@
 <app-nav-bar></app-nav-bar>
 
-<main >
+<section>
+  <form action="./home.html" method="get" class="main-contact__form">
+    <!-- Seção General Information -->
+    <h2 class="form-subtitle">INFORMAÇÕES GERAIS</h2>
+    <div class="form-row">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+    </div>
+    
+    <input type="text" placeholder="Position" required>
+    <input type="text" placeholder="Company" required>
+    
+    <div class="form-row">
+        <input type="text" placeholder="Business Area">
+        <input type="number" placeholder="Employees">
+    </div>
 
-</main>
+    <!-- Seção Contact Details -->
+    <h2 class="form-subtitle">DETALHES DE CONTATO</h2>
+    <input type="text" placeholder="Street + Nr" required>
+    
+    <div class="form-row">
+        <input type="text" placeholder="ZIP Code">
+        <input type="text" placeholder="Place">
+    </div>
+    
+    <input type="text" placeholder="Country">
+    
+    <div class="form-row">
+        <input type="tel" placeholder="Code" pattern="[+][0-9]{1,3}" style="width: 20%">
+        <input type="tel" placeholder="Phone Number" style="width: 75%">
+    </div>
+    
+    <input type="email" placeholder="Your Email" required>
 
-<main class="main-contact">
-  <img class="main-contact__img" src="/img/xls 2.2 diesel.jpg" alt="" />
+    <!-- Seção Additional Information -->
+    <div class="form-checkbox">
+        <label>
+            <input type="checkbox"> Link access to personal circulation of your site
+        </label>
+    </div>
+
+    <!-- Seção Mensagem (mantida do original) -->
+    <h2 class="form-subtitle">MENSAGEM</h2>
+    <select class="form__select" name="messageType" id="messageType" required>
+        <option value="" selected disabled>--Selecione o tipo de contato--</option>
+        <option value="praise">Elogio</option>
+        <option value="complaint">Reclamação</option>
+        <option value="request">Solicitação</option>
+    </select>
+    
+    <textarea name="message" id="contactMessage" cols="1" rows="5" 
+              class="form__message" placeholder="Digite sua mensagem" required>
+    </textarea>
+
+    <!-- LGPD (mantido do original com ajustes) -->
+    <section class="form__LGPD">
+        <p>Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer momento, será possível editar ou remover tais dados.</p>
+        
+        <div class="form-checkbox">
+            <input type="checkbox" class="input-lgpd" required>
+            <label>Sim. Li e concordo com os <a href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições.</a></label>
+        </div>
+        
+        <div class="form-checkbox">
+            <input type="checkbox" class="input-lgpd">
+            <label>Sim. Também quero receber descontos e novidades.</label>
+        </div>
+    </section>
+
+    <button class="form__btn" type="submit">Enviar</button>
+    <div class="form-register">
+        <a href="#register" class="register-link">Register here</a>
+    </div>
+</form>
+</section>
+
+<!-- <main class="main-contact">
+
+   <img class="main-contact__img" src="/img/xls 2.2 diesel.jpg" alt="" />
   <app-contact-form></app-contact-form>
 </main>
 
-<app-footer></app-footer>
+<app-footer></app-footer> -->

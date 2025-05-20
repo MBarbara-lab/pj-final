@@ -1,3 +1,155 @@
+/* Estilos Gerais */
+.main-contact__form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    color: #2d2d2d;
+}
+
+.form-subtitle {
+    color: #00274C; /* Azul Ford */
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00274C;
+    text-transform: uppercase;
+}
+
+/* Linhas com múltiplos campos */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Campos de formulário */
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #00274C;
+    border-color: transparent;
+}
+
+/* Campos lado a lado */
+.form-row > input,
+.form-row > select {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Campo de Código + Telefone */
+.form-row input[placeholder="Code"] {
+    flex: 0.2;
+    text-align: center;
+}
+
+.form-row input[placeholder="Phone Number"] {
+    flex: 0.8;
+}
+
+/* Checkboxes */
+.form-checkbox {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-checkbox label {
+    font-size: 0.9rem;
+}
+
+/* Botão de Envio */
+.form__btn {
+    background-color: #00274C; /* Azul Ford */
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.form__btn:hover {
+    background-color: #004F8B; /* Azul mais claro */
+}
+
+/* Link de Registro */
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #00274C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-subtitle {
+        font-size: 1.2rem;
+    }
+
+    input, select, textarea {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .form__btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-contact__form {
+        padding: 1rem;
+    }
+    
+    .form-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .form-row input[placeholder="Code"] {
+        flex: 1;
+    }
+}
+
+/* .form-row input {
+    flex: 1;
+}
+
+.form-checkbox {
+    margin: 10px 0;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
 :host {
     min-width: 100vw;
     min-height: 100vh;
@@ -44,4 +196,4 @@ h2{
         height: 5vh;
         width: 30vw;
     }
-}
+} */
