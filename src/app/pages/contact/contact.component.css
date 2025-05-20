@@ -1,0 +1,47 @@
+:host {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-contact {
+    align-self: center;
+    display: grid;
+    width: 65vw;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 100%;
+    row-gap: 2vh;
+    column-gap: 5vh;
+    padding: 5vh;
+    background-color: var(--gray);
+
+}
+
+.main-contact__img {
+    flex-shrink: 0;
+    margin-top: 10vh;
+    justify-self: flex-end;
+    width: 90%;
+}
+
+
+h2{
+    font-size: 3.2vh;
+    font-weight: 500;
+    margin: 3vh 0px 2vh 0;
+    font-family: var(--text-h2);
+}
+
+
+@media all and (max-width: 430px) {
+    .main-contact__form {
+        grid-row: 2;
+    }
+
+    .form__btn {
+        height: 5vh;
+        width: 30vw;
+    }
+}

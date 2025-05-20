@@ -1,0 +1,12 @@
+@import url(https://www.ford.com/shared/fonts/ford.css);
+
+:root {
+    --blue: #1351D8;
+    --dark-blue: #1B357E;
+    --light-blue: #3573FA;
+    --gray: #ececec;
+
+    --text-h1: "FordMotion", sans-serif; /* Italic: 0 Width: 100 Weight: 100– 900 */
+    --text-h2: "Archivo", sans-serif; /* Italic: 0 Width: 100 Weight: 300 – 800 */
+    --text-body: "FordMotion", sans-serif; /* Italic: 0 Width: 100 Weight: 100 – 900*/
+}

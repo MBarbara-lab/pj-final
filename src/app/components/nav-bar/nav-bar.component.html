@@ -1,0 +1,48 @@
+<nav class="nav-top">
+  <ul class="nav-top__links" [style.display]="isMobile ? 'none': 'flex'">
+    <li><a href="">Home</a></li>
+    <li><a href="">Lançamentos</a></li>
+    <li><a href="">Dashboard</a></li>
+    <li><a href="">Contato</a></li>
+  </ul>
+
+  <a href="" class="nav-top__logo"></a>
+  
+  <div class="nav-top__btns">
+  <button class="btn-sidebar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample"><i class="bi bi-list"></i></button>
+  <button class="btn-logout"><i class="bi bi-box-arrow-right"></i></button>
+  </div>
+</nav>
+
+<nav class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  <div class="sidebar__header shadow-sm p-3 bg-white">
+    <img class="sidebar__logo" src="/img/logoFord2.png" alt="" />
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="sidebar__body">
+    <ul class="sidebar__links">
+      <li class="sidebar__links__link">
+        <a href="">
+          <i class="sidebar__icon bi bi-house-door-fill"></i>
+          HOME
+        </a>
+      </li>
+
+      <li class="sidebar__links__link">
+        <a href="">
+          <i class="sidebar__icon bi bi-car-front-fill"></i>
+          LANÇAMENTOS
+        </a>
+      </li>
+      <li class="sidebar__links__link">
+        <a href="">
+          <i class="bi bi-graph-up-arrow"></i>
+          DASHBOARD
+        </a>
+      </li>
+      <li class="sidebar__links__link"><a href="">CONTATO</a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,141 @@
+.nav-top {
+    width: 100vw;
+    height: 8vh;
+    padding: 0 4vw;
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 1fr;
+    column-gap: 2vw;
+    align-items: center;
+    /* background-color: var(--gray);
+    transition: background-color 1s; */
+}
+
+.nav-top__links {
+    column-gap: 3vw;
+    font-size: 1rem;
+}
+
+.nav-top__links, .nav-top__links li, .nav-top__links a {
+    display: flex;
+    height: 100%;
+}
+
+.nav-top__links a {
+    box-sizing: border-box;
+    font-family: var(--text-body);
+    font-weight: 500;
+
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+    grid-column: 1;
+}
+
+.nav-top__links a:hover,
+.btn-logout:hover,
+.btn-sidebar:hover {
+    border-bottom: 2px var(--dark-blue) solid;
+    color: var(--dark-blue);
+}
+
+.nav-top__logo {
+    height: 6vh;
+    width: 12vh;
+    background-image: url(/img/ford-logo-blue.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.nav-top__btns {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 2vh;
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.btn-sidebar,
+.btn-logout {
+    box-sizing: border-box;
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    background-color: transparent;
+    color: var(--dark-blue);
+}
+
+.sidebar {
+    width: 25vw;
+}
+
+.sidebar__header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar__logo {
+    height: 80%;
+}
+
+.sidebar__body {
+    background-color: var(--gray);
+}
+
+.sidebar__icon {
+    fill: var(--dark-blue);
+    width: 2vh;
+}
+
+.sidebar__links__link {
+    margin: 0 5vh;
+    padding: 3vh 0;
+    font-weight: 500;
+    font-family: var(--text-body);
+    border-bottom: 2px solid #d3d3d3;
+}
+
+.sidebar__links__link a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    column-gap: 2vh;
+}
+
+@media all and (max-width: 480px) {
+    .nav-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        width: 70vw;
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+    .nav-top {
+        grid-template-columns: 0.25fr 1fr 0.25fr;
+    }
+
+    .nav-top__logo {
+        grid-column: 1;
+    }
+
+    .nav-top__links {
+        grid-column: 2;
+    }
+
+    .nav-top__btns {
+        grid-column: 3;
+    }
+
+    .sidebar {
+        width: 40vw;
+    }
+}
