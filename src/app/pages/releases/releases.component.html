@@ -1,1 +1,92 @@
-<p>releases works!</p>
+<section class="main-releases">
+  <table class="main-releases__cars">
+    <tr *ngIf="carList.length">
+      <ng-container *ngFor="let car of carList">
+        <td class="row__car">
+          <img class="car__img" [src]="car.img" [alt]="car.modelo" />
+
+          <div class="car__content">
+            <input
+              type="checkbox"
+              class="car__checkbox"
+              (change)="setCarToCompare($event, car)"
+            />
+
+            <div class="content__text">
+              <p>Ford Ranger</p>
+              <span>{{ car.modelo }}</span>
+            </div>
+
+            <button class="car__btn"></button>
+          </div>
+        </td>
+      </ng-container>
+    </tr>
+  </table>
+
+  <button class="main-releases__btn" (click)="showCompare()">
+    Comparar Carros
+  </button>
+
+  <dialog #compareDialog>
+    <table class="main-releases__compare">
+      <tr>
+        <td></td>
+        <td><img [src]="cars[0].img" class="td__car__img" /></td>
+        <td><img [src]="cars[1].img" class="td__car__img" /></td>
+      </tr>
+      <tr>
+        <td>Modelo</td>
+        <td>{{ cars[0].modelo }}</td>
+        <td>{{ cars[1].modelo }}</td>
+      </tr>
+      <tr>
+        <td>Preço</td>
+        <td>R$ {{ cars[0].preco | number:'1.0-0' }}</td>
+        <td>R$ {{ cars[1].preco | number:'1.0-0' }}</td>
+      </tr>
+      <tr>
+        <td>Altura da caçamba</td>
+        <td>{{ cars[0].alturaC }} mm</td>
+        <td>{{ cars[1].alturaC }} mm</td>
+      </tr>
+      <tr>
+        <td>Altura do veículo</td>
+        <td>{{ cars[0].alturaV }} mm</td>
+        <td>{{ cars[1].alturaV }} mm</td>
+      </tr>
+      <tr>
+        <td>Altura livre do solo</td>
+        <td>{{ cars[0].alturaLS }} mm</td>
+        <td>{{ cars[1].alturaLS }} mm</td>
+      </tr>
+      <tr>
+        <td>Capacidade de carga</td>
+        <td>{{ cars[0].capacidadeC }} kg</td>
+        <td>{{ cars[1].capacidadeC }} kg</td>
+      </tr>
+      <tr>
+        <td>Motor</td>
+        <td>{{ cars[0].motor }} L</td>
+        <td>{{ cars[1].motor }} L</td>
+      </tr>
+      <tr>
+        <td>Potência</td>
+        <td>{{ cars[0].potencia }} cv</td>
+        <td>{{ cars[1].potencia }} cv</td>
+      </tr>
+      <tr>
+        <td>Volume da caçamba</td>
+        <td>{{ cars[0].volumeC }} L</td>
+        <td>{{ cars[1].volumeC }} L</td>
+      </tr>
+      <tr>
+        <td>Roda</td>
+        <td>{{ cars[0].roda }}</td>
+        <td>{{ cars[1].roda }}</td>
+      </tr>
+    </table>
+
+    <button type="button" id="close-btn" (click)="hideCompare()">Fechar</button>
+  </dialog>
+</section>

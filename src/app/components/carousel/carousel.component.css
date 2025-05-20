@@ -1,37 +1,53 @@
-.carousel {
+:host {
+    height: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
 }
-
-
 
 .carousel__img {
     display: flex;
-    width: 60vw;
+    align-items: center;
+    height: 90%;
     transition: scale 0.5s;
+}
+
+.carousel__img img {
+    height: 100%;
 }
 
 .carousel__img:hover {
     scale: 1.01;
 }
 
-.btn-next {
-    rotate: 90deg;
+.carousel__text {
+    font-family: var(--text-body);
 }
 
+
 @media all and (max-width: 480px) {
-    
-    .carousel__img {
-        width: 90vw;
-        height: 30vh;
+
+    :host {
+        height: 100%;
         object-fit: cover;
-        border-radius: 10px;
+    }
+
+    .carousel__img {
+        width: 100%;
+    }
+
+    .carousel__img img {
+        height: auto;
+        width: 100%;
+        height: 75%;
+        object-fit: cover;
+        border-radius: 15px;
     }
 
     .carousel__text {
-        width: 60vw;
+        width: 70vw;
         text-align: center;
     }
 
@@ -40,11 +56,17 @@
     }
 }
 
-@media all and (max-width: 768px) and (min-width: 481px) {
+@media all and (min-width: 481px) and (max-width: 768px) {
+    :host {
+        width: 90%;
+    }
+    
     .carousel__img {
-        width: 80vw;
-        height: 40vh;
+        width: 100%;
+    }
+
+    .carousel__img img {
+        width: 100%;
         object-fit: cover;
-        border-radius: 10px;
     }
 }

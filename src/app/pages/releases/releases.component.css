@@ -1,0 +1,184 @@
+.main-releases {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 2vh;
+    padding: 5vh;
+    flex-grow: 1;
+    justify-items: center;
+}
+
+.main-releases__video {
+    width: 100%;
+    height: 40vh;
+}
+
+.main-releases__table {
+    width: 60vw;
+}
+
+.main-releases__cars {
+    height: 20vh;
+}
+
+.cars__row {
+    display: flex;
+}
+
+.row__car {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+}
+
+.car__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vh;
+    column-gap: 3%;
+    width: 100%;
+}
+
+.content__text {
+    color: var(--blue);
+    width: 60%;
+}
+
+.content__text span {
+    color: #000000;
+}
+
+.car__img {
+    width: 50%;
+}
+
+.car__checkbox {
+    width: 3.7vh;
+    height: 3.7vh;
+    cursor: pointer;
+}
+
+.car__checkbox:checked {
+    background-color: var(--blue);
+}
+
+.car__btn {
+    width: 3vh;
+    height: 3vh;
+    border: none;
+    background-image: url(/img/info.png);
+    background-size: cover;
+    border-radius: 100%;
+    background-position: center;
+}
+
+.main-releases__btn {
+    background-color: var(--blue);
+    color: #FFFFFF;
+    padding: 1vh;
+    border-radius: 10px;
+    border: none;
+    width: 15vw;
+    font-weight: 600;
+    font-size: 1.8vh;
+}
+
+.main-releases__compare {
+    border-collapse: collapse;
+    width: 60vw;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+}
+
+.main-releases__compare th, .main-releases__compare td {
+    text-align: left;
+    padding: 8px;
+    font-size: 2vh;
+}
+
+.main-releases__compare td:nth-child(1) {
+    font-weight: 700;
+}
+
+.main-releases__compare tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#close-btn {
+    font-size: 2vh;
+    align-items: center;
+    height: 3.5vh;
+    width: 7vw;
+    margin-top: 30px;
+    background-color: var(--blue);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+}
+
+#compare {
+    justify-items: center;
+}
+
+.main-releases__btn:hover {
+    background-color: var(--blue-hover);
+}
+
+@media all and (max-width: 1130px) and (min-width:430px) {
+    .row__car {
+        width: 30vw;
+    }
+
+    .td__car__img {
+        width: 30vw;
+    }
+}
+
+@media all and (max-width: 430px) {
+    .main-releases__cars {
+        height: auto;
+        width: 90vw;
+    }
+
+    .cars__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .row__car {
+        width: 100%;
+        padding: 0;
+        height: 100%;
+    }
+
+    .car__img {
+        width: 60%;
+    }
+
+    .main-releases__btn {
+        width: 40vw;
+        padding: 5px;
+    }
+
+    .main-releases__compare {
+        border-collapse: collapse;
+        width: 60vw;
+    }
+
+    .td__car__img {
+        width: 25vw;
+    }
+
+    #close-btn {
+        font-size: 2vh;
+        height: 3.5vh;
+        width: 20vw;
+        margin-top: 15px;
+    }
+}
