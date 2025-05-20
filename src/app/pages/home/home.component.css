@@ -1,3 +1,11 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
 .main-home {
     display: flex;
     flex-direction: column;
@@ -17,13 +25,6 @@
     justify-content: space-around;
 }
 
-.carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
 .btn-next, .btn-back {
     display: none;
     width: 4vh;
@@ -35,20 +36,6 @@
 
 .btn-back {
     rotate: -90deg;
-}
-
-.main-home__img {
-    display: flex;
-    width: 60vw;
-    transition: scale 0.5s;
-}
-
-.main-home__img:hover {
-    scale: 1.01;
-}
-
-.btn-next {
-    rotate: 90deg;
 }
 
 .btn-stop {
@@ -63,30 +50,9 @@
     justify-self: flex-start;
 }
 
-@media all and (max-width: 430px) {
-    
-    .main-home__img {
-        width: 90vw;
-        height: 30vh;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .main-home__text {
-        width: 60vw;
-        text-align: center;
-    }
+@media all and (max-width: 480px) {
 
     .btn-stop {
         width: 30vw;
-    }
-}
-
-@media all and (max-width: 999px) and (min-width: 431px) {
-    .main-home__img {
-        width: 80vw;
-        height: 40vh;
-        object-fit: cover;
-        border-radius: 10px;
     }
 }

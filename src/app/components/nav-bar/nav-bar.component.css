@@ -1,6 +1,10 @@
-.nav-top {
+:host {
     width: 100vw;
     height: 8vh;
+
+}
+
+.nav-top {
     padding: 0 4vw;
     display: grid;
     grid-template-columns: 1fr 0.25fr 1fr;

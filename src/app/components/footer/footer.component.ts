@@ -9,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit{
   isMobile = false
   ngOnInit(): void {
-    this.isMobile = window.matchMedia("(max-width: 480px)").matches
+    if (window) {
+      this.isMobile = window.matchMedia("(max-width: 480px)").matches
+    }
 
     if (!this.isMobile) {
       this.isMediaMenuVisible = true

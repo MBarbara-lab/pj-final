@@ -1,4 +1,13 @@
 <app-nav-bar></app-nav-bar>
 
+<main class="main-home">
+  <app-welcome-pop-up></app-welcome-pop-up>
+  <section class="carousel">
+    <button class="btn-back" (click)="carouselComponent.back()">←</button>
+    <app-carousel #carouselComponent></app-carousel>
+    <button class="btn-next" (click)="carouselComponent.next()"></button>
+  </section>
+  <button class="btn-stop" (click)="carouselComponent.stop()">Parar Carrossel</button>
+</main>
 
 <app-footer></app-footer>
