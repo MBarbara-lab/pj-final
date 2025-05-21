@@ -1,0 +1,89 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3vh;
+  align-items: center;
+}
+
+.form__title {
+  font-family: var(--title);
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  font-size: 2.5rem;
+  color: #333333;
+}
+
+.main__input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-container__icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 1vh;
+  position: absolute;
+  color: var(--dark-blue);
+}
+
+.input-container__input {
+  width: 100%;
+  padding: 1vh;
+  padding-left: 4vh;
+  border-radius: 10px;
+  font-family: var(--text-body);
+  font-size: 0.8rem;
+}
+
+.form__auto-login {
+    font-family: var(--subtitle);
+    font-size: 0.8rem;
+  display: flex;
+  width: fit-content;
+  column-gap: 3vh;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__auto-login>div {
+  display: flex;
+  column-gap: 1vh;
+  align-items: center;
+}
+
+.form-check-input:checked {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+.form__button {
+  font-family: var(--subtitle);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  width: 100%;
+  height: 4vh;
+  outline: none;
+  border: none;
+  color: #FFFFFF;
+  background-color: var(--dark-blue);
+  box-shadow: 2px 2px 3px 1px #868686;
+}
+
+@media all and (max-width: 480px) {
+   
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+    
+}

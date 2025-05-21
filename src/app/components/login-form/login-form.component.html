@@ -1,0 +1,25 @@
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()" class="main__form">
+    <h1 class="form__title">LOGIN</h1>
+
+    <div class="main__input-container">
+      <i class="input-container__icon bi bi-person"></i>
+      <input formControlName="username" type="text" placeholder="Insira seu nome de usuário"
+        class="input-container__input" required />
+    </div>
+
+    <div class="main__input-container">
+      <i class="input-container__icon bi bi-lock"></i>
+      <input formControlName="password" type="password" placeholder="Insira sua senha" class="input-container__input"
+        required />
+    </div>
+
+    <div class="form__auto-login">
+      <label for="">Logar automaticamente</label>
+      <div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="form__button">Entrar</button>
+</form>
