@@ -28,9 +28,8 @@ export class CarouselComponent implements OnDestroy {
 
   index = 0;
   selectedItem: CarouselItemData = this.itemsData[0];
-  isCarouselStopped = true;
+  isCarouselRunning = false;
   carouselTimer: any = null;
-
 
   ngOnDestroy(): void {
     this.stop();
@@ -43,9 +42,9 @@ export class CarouselComponent implements OnDestroy {
   }
 
   start(interval: number) {
-    if (this.carouselTimer || this.isCarouselStopped === false) return;
+    if (this.carouselTimer || this.isCarouselRunning === true) return;
 
-    this.isCarouselStopped = false;
+    this.isCarouselRunning = true;
     this.selectedItem = this.itemsData[this.index];
 
     this.carouselTimer = setInterval(() => {
@@ -56,7 +55,7 @@ export class CarouselComponent implements OnDestroy {
   stop() {
     if (this.carouselTimer) {
       clearInterval(this.carouselTimer);
-      this.isCarouselStopped = true;
+      this.isCarouselRunning = false;
     }
   }
 

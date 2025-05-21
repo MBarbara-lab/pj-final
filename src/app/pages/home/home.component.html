@@ -1,13 +1,23 @@
 <app-nav-bar></app-nav-bar>
 
 <main class="main-home">
-  <!-- <app-welcome-pop-up></app-welcome-pop-up> -->
   <section class="main__carousel">
-    <button class="btn-back" (click)="carouselComponent.back()"></button>
+    <button class="btn-back" 
+            (click)="carouselComponent.back()" 
+            [style.visibility]="carouselComponent?.isCarouselRunning ? 'visible' : 'hidden'"></button>
+            
     <app-carousel #carouselComponent></app-carousel>
-    <button class="btn-next" (click)="carouselComponent.next()"></button>
+    
+    <button class="btn-next" 
+            (click)="carouselComponent.next()" 
+            [style.visibility]="carouselComponent?.isCarouselRunning ? 'visible' : 'hidden'"></button>
   </section>
-  <button class="btn-stop" (click)="carouselComponent.stop()">Parar Carrossel</button>
+  
+  <button class="btn-stop" 
+          (click)="carouselComponent.stop()" 
+          [style.visibility]="carouselComponent?.isCarouselRunning ? 'hidden' : 'visible'">
+    Parar Carrossel
+  </button>
 </main>
 
 <app-footer></app-footer>

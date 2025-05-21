@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
   isMobile = false
-  ngOnInit(): void {
-    this.isMobile = window.matchMedia("(max-width: 430px)").matches;
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
+   ngOnInit(): void {
+    this.checkViewport();
+  }
+
+  private checkViewport() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.matchMedia("(max-width: 480px)").matches;
+      
+      window.addEventListener('resize', () => {
+        this.isMobile = window.matchMedia("(max-width: 480px)").matches;
+      });
+    }
   }
 }
