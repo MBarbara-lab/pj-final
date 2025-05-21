@@ -1,12 +1,23 @@
 .card {
   width: 20vw;
   height: 22vh;
+  border-radius: 20px;
   border: #d7d7d7 3px solid;
 }
 
+.card.protected {
+    flex-shrink: 0;
+  }
+
 .card__title {
+  font-family: var(--subtitle);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: #4a4a4a;
+   font-weight: 600;
+  border-radius: 20px 20px 0 0;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 2vh;
   background-color: #f7f7f7;
 }
@@ -15,26 +26,52 @@
   padding: 0.5vh 2vh;
 }
 
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .card__content>* {
   margin: 0;
 }
 
+.card__content > select {
+  font-family: var(--subtitle);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  font-size: 1.2rem;
+  width: 90%;
+}
+
 .card__content__number {
+  font-family: var(--subtitle);
+  font-weight: 500;
+  letter-spacing: -0.015em;
   color: var(--blue);
   font-size: 1.6rem;
   font-weight: 500;
 }
 
-@media all and (max-width: 670px) {
+@media all and (max-width: 480px) {
   .card {
     width: 60vw;
   }
 
-  .card.protected {
-    flex-shrink: 0;
+  .vin-code {
+    width: 30vw;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  .card {
+    width: 22vw;
   }
 
   .card__title {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-justify: center;
   }
 }

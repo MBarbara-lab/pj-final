@@ -1,5 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, inject, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,6 +10,13 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent implements OnInit {
+    router = inject(Router)
+
+  logout () {
+    sessionStorage.removeItem("username")
+    this.router.navigate([""])
+  }
+
   isMobile = false
 
   constructor(

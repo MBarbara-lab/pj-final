@@ -1,3 +1,6 @@
+
+
+<div class="main">
 <app-nav-bar></app-nav-bar>
 
 <h1 class="page-title">Dashboard FORD</h1>
@@ -23,7 +26,7 @@
     <img src="{{ selectedCar.img }}" alt="Mustang Ford" class="car-img">
 </section>
 
-<section>
+<section class="main__table">
     <app-car-table
     [vin]="selectedCar.vin"
     [odometer]="vinInfos.odometer"
@@ -33,3 +36,4 @@
     [long]="vinInfos.long"
     ></app-car-table>
 </section>
+</div>

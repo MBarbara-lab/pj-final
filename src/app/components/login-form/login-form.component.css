@@ -79,11 +79,3 @@
   background-color: var(--dark-blue);
   box-shadow: 2px 2px 3px 1px #868686;
 }
-
-@media all and (max-width: 480px) {
-   
-}
-
-@media all and (min-width: 481px) and (max-width: 768px) {
-    
-}
